@@ -1,3 +1,10 @@
+/* Start Variables */
+:root {
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
+}
+/* End Variables */
 /* gloabal settings */
 *,
 ::after,
@@ -8,7 +15,7 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 
@@ -43,9 +50,53 @@ body {
 
 /* gloabal settings */
 
+
+/* special heading start */
+.special-heading{
+text-align: center;
+}
+.special-heading h2{
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.special-heading p{
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  color: #777;
+}
+.special-heading h2::before{
+  content: '';
+  width: 15%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.special-heading h2::after{
+  content: '';
+  aspect-ratio: 1 / 1;
+  height: 1rem;
+  border-radius: 50%;
+  border: solid 2px black;
+  background-color: white;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* special heading end */
 /* header start */
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   width: 100%;
   background-color: transparent;
@@ -286,3 +337,56 @@ nav li a {
 }
 
 /* landing end */
+
+/* services start */
+.services{
+  padding:var(--section-padding) 0;
+ 
+}
+.services .container{
+  max-width: 100%;
+}
+.services i{
+  margin: 0 0 30px;
+}
+
+.service{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 100%;
+
+}
+.service h2{
+  margin-bottom: 30px;
+  color: var(--main-color);
+}
+.service p{
+  line-height: 2;
+  color: #777;
+}
+@media (min-width:768px) {
+  .services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    gap: 30px;
+  
+  }
+  .service{
+    flex-direction: row;
+    text-align: start;
+    
+  }
+  .service i{
+    margin-right: 50px;
+  }
+  .service .text{
+    margin-top: 5px;
+  }
+  .service .text p{
+    width: fit-content;
+  }
+  
+}
+/* services end */
