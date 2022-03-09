@@ -492,7 +492,7 @@ nav li a {
 }
 
 @media (max-width:767px) {
-  .img-container{
+  .img-container {
     display: none;
   }
 }
@@ -603,7 +603,7 @@ nav li a {
 }
 
 .video::after {
-  content:"";
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -644,3 +644,112 @@ nav li a {
 }
 
 /* video section end */
+
+
+/* about us section start */
+
+.about {
+  padding-top: var(--section-padding);
+  text-align: center;
+  overflow: hidden;
+}
+
+.about .container {
+  max-width: 100%;
+
+}
+
+.about .about-image-container {
+  position: relative;
+  bottom: -120px;
+  margin-top: -100px;
+
+}
+
+@media (max-width:768px) {
+  .about .about-image-container img {
+    max-width: 100%;
+  }
+
+  .about .about-image-container {
+    bottom: -60px;
+    margin-top: -60px;
+  }
+}
+
+/* about us section end */
+
+/* stats section start */
+.stats {
+  position: relative;
+  width: 100%;
+  background-image: url('../images/stats.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  max-width: 100%;
+}
+
+.stats::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 40%);
+  z-index:-1;
+}
+
+.stats .container {
+  display: flex;
+  flex-wrap: wrap;
+ 
+  color: white;
+  z-index:2;
+}
+
+.stat {
+  flex: 25%;
+  background-color: var(--transparent-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  
+}
+
+.stat h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.stat p {
+  font-size: 14px;
+}
+
+.stat div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+@media (max-width:767px) {
+  .stat{
+    flex-basis: 100%;
+  }
+ 
+  
+}
+
+/* stats section end */
