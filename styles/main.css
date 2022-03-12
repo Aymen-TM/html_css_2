@@ -871,9 +871,10 @@ nav li a {
   display: flex;
   justify-content: center;
   margin-top: 50px;
- 
+
   list-style: none;
 }
+
 .testimonials .testimonials_bullets li {
   width: 14px;
   height: 14px;
@@ -899,7 +900,8 @@ nav li a {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .testimonials .contributor p:first-child{
+
+  .testimonials .contributor p:first-child {
     text-align: center;
   }
 
@@ -909,3 +911,136 @@ nav li a {
 }
 
 /* skills_testimonial section end */
+
+
+/* quote section start */
+.quote {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../images/quote.jpg");
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 75%);
+}
+
+.quote .container {
+  position: relative;
+}
+
+.quote q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* quote section end */
+
+
+/* pricing section start */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.pricing_content{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.price_box{
+  flex-basis: 30%;
+  margin-top: 20px;
+}
+.pricing_content .price_box .price{
+  padding: 40px 20px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+
+.price>h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.price>h1 {
+  font-size: 60px;
+  font-weight: bold;
+  position: relative;
+  margin: 0;
+}
+.price>h1::after{
+  content: "/Mo";
+  position: absolute;
+  right:15%;
+  top: 50%;
+  font-size: 20px;
+}
+.price>h1::before{
+  content: "$";
+  position: absolute;
+  left: 25%;
+  top:0;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.feature{
+  list-style: none;
+  display: block;
+  text-align: center;
+}
+
+.feature li{
+  padding: 20px 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid var(--main-color);
+}
+.feature li:last-child{
+ max-width: 100%;
+}
+
+
+.price_box a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 20px 20px;
+  border: 1px solid var(--main-color);
+  margin: 30px auto;
+  width: fit-content;
+}
+
+
+
+
+@media (max-width:768px) {
+  .price_box{
+    flex-basis: 50%;
+  }
+}
+@media (max-width:500px) {
+  .price_box{
+    flex-basis: 100%;
+  }
+}
+
+
+
+/* pricing section end */
